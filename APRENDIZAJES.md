@@ -85,13 +85,18 @@ Encontré que join() permite unir los elementos de un arreglo utilizando un sepa
 **Consulté:** _enlace(s)_ → _qué encontré_
 
 1. **Predice y comprueba:** después de ejecutar `filtrarPorTipo(rutas, 'cafe')` en la consola, ¿cuánto vale `rutas.length`? ¿Por qué?
-   _Tu respuesta_
+   _Tu respuesta_El valor sigue siendo 11 porque el método filter() crea un nuevo arreglo con los elementos que cumplen la condición, sin eliminar ni modificar las rutas del arreglo original.
+   https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
 2. **Explica el recorrido:** describe paso a paso qué pasa desde que la persona hace clic en el botón "Cultura" hasta que aparecen las tarjetas nuevas. Menciona: el evento, `estado`, `aplicarFiltros()`, `filtrarPorTipo()` y `pintarRutas()`.
-   _Tu respuesta_
+   _Tu respuesta_Cuando el usuario presiona el botón Cultura, se activa el evento click y se guarda la categoría seleccionada en estado.tipo. Después se ejecuta aplicarFiltros(), que selecciona las rutas correspondientes y aplica la búsqueda. Finalmente, pintarRutas() actualiza las tarjetas y el mensaje con la cantidad de resultados encontrados.
+   https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener
+   https://developer.mozilla.org/es/docs/Web/API/HTMLElement/dataset
 
 3. **¿Qué pasaría si…** usas el evento `'change'` en lugar de `'input'` en el buscador? Pruébalo y describe la diferencia.
-   _Tu respuesta_
+   _Tu respuesta_El evento input permite que las tarjetas se actualicen mientras el usuario escribe. En cambio, el evento change espera hasta que se confirme el cambio del campo. Por eso es mejor utilizar input en nuestro buscador, ya que permite obtener resultados de manera inmediata.
+   https://developer.mozilla.org/es/docs/Web/API/Element/input_event
+   https://developer.mozilla.org/es/docs/Web/API/HTMLElement/change_event
 
 ---
 
