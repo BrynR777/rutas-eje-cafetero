@@ -50,6 +50,12 @@
 
 **Consulté:** _enlace(s)_ → _qué encontré_
 
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+Encontré que map() permite transformar los elementos de un arreglo.
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+Encontré que join() permite unir los elementos de un arreglo utilizando un separador.
+
 1. **Predice y comprueba:** antes de ejecutarlas en la consola del navegador, escribe qué crees que devuelve cada línea. Después ejecútalas y anota el resultado real.
    ```js
    [1, 2, 3].map((n) => n * 10)
@@ -59,16 +65,18 @@
    ```
    | Línea | Mi predicción | Resultado real |
    |---|---|---|
-   | 1 | | |
-   | 2 | | |
-   | 3 | | |
-   | 4 | | |
+   | 1 | [10, 20, 30] | [10, 20, 30]|
+   | 2 | "abc" | "abc" |
+   | 3 | "a - b - c" | "a - b - c" |
+   | 4 | 11 | 11 |
 
 2. **Experimenta y explica:** quita temporalmente `.join('')` de `pintarRutas`. ¿Qué aparece entre las tarjetas y por qué? (Pista: ¿qué hace `innerHTML` cuando le asignas un arreglo?). Vuelve a ponerlo.
-   _Tu respuesta_
+   _Tu respuesta_Al quitar .join(''), aparecen comas entre las tarjetas porque map() devuelve un arreglo y, al asignarlo directamente a innerHTML, JavaScript lo convierte en texto separando sus elementos con comas. Al utilizar join(''), podemos unir todas las tarjetas sin ningún separador.
+   https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 
 3. **Explica:** ¿por qué la tarjeta se escribe con comillas invertidas `` ` `` y no con comillas simples `' '`? ¿Qué hace `${ }`?
-   _Tu respuesta_
+   _Tu respuesta_Utilizamos las comillas invertidas porque nos permiten escribir código HTML en varias líneas e incluir datos de JavaScript dentro del texto. La expresión ${ } nos permite insertar información como el nombre, el municipio, la descripción y el precio de cada ruta, sin necesidad de crear todas las tarjetas manualmente.
+   https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Template_literals
 
 ---
 
