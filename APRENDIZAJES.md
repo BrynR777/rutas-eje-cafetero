@@ -33,13 +33,16 @@
 **Consulté:** _enlace(s)_ → _qué encontré_
 
 1. **Explica:** ¿qué relación hay entre `data-bs-target="#menu"` en el botón y el `id="menu"` del div? ¿Quién lee ese atributo?
-   _Tu respuesta_
+   _Tu respuesta_El atributo data-bs-target="#menu" le indica a Bootstrap cuál es el menú que debe abrir o cerrar cuando se presiona el botón. El JavaScript de Bootstrap se encarga de leer ese atributo y buscar el elemento que tenga el identificador menu. Si los nombres no coinciden, el menú no funcionará correctamente.
+   https://getbootstrap.com/docs/5.3/components/navbar/#responsive-behaviors
 
 2. **Experimenta:** abre y cierra el menú en un ancho de celular y observa en DevTools el atributo `aria-expanded` del botón. ¿Qué pasa con su valor? ¿Para quién es útil esa información?
-   _Tu respuesta_
+   _Tu respuesta_Bootstrap cambia automáticamente el valor de aria-expanded. Cuando el menú está cerrado, su valor es false, y cuando está abierto, cambia a true. Esto es útil para las personas que utilizan lectores de pantalla, porque les permite saber si el menú está abierto o cerrado, mejorando la accesibilidad de la página.
+   https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded
 
 3. **¿Qué pasaría si…** en un botón de filtro escribes `data-tipo="café"` (con tilde)? Piensa en lo que hay en `datos.js` antes de responder.
-   _Tu respuesta_
+   _Tu respuesta_El filtro no encontraría las rutas correspondientes al café, porque en el archivo datos.js el tipo está escrito como cafe, sin tilde. Al realizar la comparación, JavaScript interpreta estos valores como diferentes. Por eso debemos asegurarnos de que los valores de los botones coincidan exactamente con los datos que tenemos almacenados.
+   https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Strict_equality
 
 ---
 

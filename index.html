@@ -14,6 +14,16 @@
   <!-- ===== COMPONENTE 1: NAVBAR CON COLLAPSE ===== -->
   <header>
     <nav class="navbar navbar-expand-md navbar-eje" data-bs-theme="dark" aria-label="Principal">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rutas">Rutas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
       <div class="container">
         <a class="navbar-brand fw-bold" href="#">Rutas del Eje</a>
 
@@ -49,6 +59,11 @@
           <div class="btn-group flex-wrap" role="group" aria-label="Filtrar por tipo de ruta">
             <!-- Ejemplo resuelto -->
             <button type="button" class="btn btn-outline-primary active" data-tipo="todos" aria-pressed="true">Todas</button>
+            <button type="button" class="btn btn-outline-primary" data-tipo="naturaleza" aria-pressed="false">Naturaleza</button>
+            <button type="button" class="btn btn-outline-primary" data-tipo="cultura" aria-pressed="false">Cultura</button>
+            <button type="button" class="btn btn-outline-primary" data-tipo="cafe" aria-pressed="false">Café</button>
+            <button type="button" class="btn btn-outline-primary" data-tipo="aventura" aria-pressed="false">Aventura</button>
+            </button>
 
             <!-- TODO G2.2 - Agrega 4 botones iguales al de arriba, SIN la clase active y con aria-pressed="false":
                  data-tipo="naturaleza" (Naturaleza), "cultura" (Cultura), "cafe" (Café), "aventura" (Aventura)
