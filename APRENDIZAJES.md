@@ -15,13 +15,16 @@
 **Consulté:** _enlace(s)_ → _qué encontré_
 
 1. **Explica:** ¿qué ventaja tiene escribir los colores como variables en `:root` en vez de escribir el hex directamente en cada regla?
-   _Tu respuesta_
+   _Tu respuesta_Las variables CSS nos permiten organizar los colores y las fuentes en un solo lugar. Si queremos cambiar el diseño de la página, solamente debemos modificar el valor de la variable y el cambio se aplica en todos los elementos que la utilizan. Esto nos ahorra tiempo y evita repetir código.
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties
 
 2. **Experimenta y explica:** en DevTools selecciona el botón "Ver rutas", pestaña *Computed* (o *Calculado*) y busca `--bs-btn-bg`. ¿De dónde sale su valor? ¿Por qué cambiar `--bs-primary` no habría cambiado el color del botón?
-   _Tu respuesta_
+   _Tu respuesta_El color del botón sale de la variable --eje-primario, que utilizamos para personalizar las variables propias de Bootstrap. Cambiar solamente --bs-primary no sería suficiente porque los botones tienen sus propias variables para controlar el color del texto, el fondo, los bordes y sus diferentes estados.
+   https://getbootstrap.com/docs/5.3/components/buttons/#variables
 
 3. **¿Qué pasaría si…** enlazas `estilos.css` ANTES de `bootstrap.min.css` en el `<head>`? Pruébalo, describe lo que ves y vuelve a dejarlo como estaba.
-   _Tu respuesta_
+   _Tu respuesta_Al colocar estilos.css antes de Bootstrap, algunos estilos personalizados pueden perderse porque Bootstrap se carga después y puede sobrescribir nuestras reglas. Por eso debemos cargar primero Bootstrap y después nuestro archivo de estilos, para conservar el diseño que queremos implementar.
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascade/Introduction
 
 ---
 
